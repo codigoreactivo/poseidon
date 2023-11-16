@@ -45,8 +45,8 @@ const Formulario = () => {
       </div>
 
       {/* Tercera fila */}
-      <div className="flex space-y-4">
-        <select className="border p-2" name="tipoDocumento">
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+        <select className="" name="tipoDocumento">
           <option value="DNI">DNI</option>
           <option value="CarnetExtranjeria">Carnet de Extranjería</option>
           <option value="Pasaporte">Pasaporte</option>

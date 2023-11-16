@@ -9,7 +9,7 @@ import Link from "next/link";
 const page = () => {
   return (
     <div>
-      <section className="flex w-full 2xl:flex-row flex-col justify-center h-[80vh] items-center">
+      <section className="flex w-full xl:flex-row flex-col justify-center xl:h-[80vh] h-auto items-center">
         <div className="flex basis-[50%] justify-center">
           <iframe
             width="629"
@@ -25,12 +25,15 @@ const page = () => {
           <Form />
         </div>
       </section>
-      <section className=" h-[90vh] flex 2x:flex-row flex-col justify-center">
-        <div className="flex self-center w-full xl:flex-row flex-col h-screen">
-          <div className="w-[50%] justify-center items-center h-full bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: "url('img/con-poseidon.jpg')",
-        }}></div>
-          <div className="w-[50%] flex flex-col justify-center p-4 ">
+      <section className=" xl:h-[90vh] h-auto flex xl:flex-row flex-col justify-center">
+        <div className="flex self-center w-full xl:flex-row flex-col h-[90vh]">
+          <div
+            className="xl:w-[50%] justify-center items-center h-full bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('img/con-poseidon.jpg')",
+            }}
+          ></div>
+          <div className="xl:w-[50%] flex flex-col justify-center p-4 ">
             <div className="justify-center items-start flex flex-col">
               <h2>Malecón de 200 metros lineales</h2>
               <p>Lotes en primera fila de alta rentabilidad, desde:</p>
@@ -57,9 +60,9 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className=" h-[70vh] flex flex-col justify-center items-center">
+      <section className=" xl:h-[70vh] h-auto flex flex-col justify-center items-center">
         <h2>Este proyecto cuenta con:</h2>
-        <div className=" flex flex-coi 2xl:flex-row justify-center items-center 2xl:w-[1200px] gap-10">
+        <div className=" flex flex-col xl:flex-row justify-center items-center xl:w-[1200px] w-auto gap-10">
           <div>
             <div></div>
             <p>Redes de agua, desagüe y electrificación</p>
@@ -110,12 +113,48 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="m-auto h-[80vh]">
-        <Maps/>
+      <section className="xl:m-auto xl:h-[80vh] h-auto">
+        <Maps />
       </section>
-      <section></section>
-      <section></section>
-      <Wa/>
+      <section className="w-full h-auto flex flex-col justify-center items-center">
+        <div className=" xl:max-w-[1290px] w-full ">
+          <h2>A un paso de:</h2>
+          <div className=" grid grid-cols-2">
+            <div>
+              <Image
+                data-aos="fade-up"
+                src="/img/basia.jpg"
+                width={629}
+                height={420}
+              ></Image>
+              <h3>BOULEVARD DE ASIA</h3>
+              <p>
+                Disfruta de los diferentes puntos de diversión que ofrece el
+                Boulevard, ubicado a 20 min de nuestro condominio, rodeado de
+                centros comerciales y centros de entretenimiento
+              </p>
+            </div>
+            <div>
+              <Image
+                data-aos="fade-up"
+                src="/img/muellea.jpg"
+                width={629}
+                height={420}
+              ></Image>
+              <h3>MUELLE DE CERRO AZUL</h3>
+              <p>
+                Disfruta de una maravillosa vista del mar, sus grandes
+                acantilados y divisar aves como el pelícano, el guanay y aves
+                guaneras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className=" w-auto ">
+        <Gallery />
+      </section>
+      <Wa />
     </div>
   );
 };
