@@ -28,8 +28,8 @@ const Formulario = () => {
     <form onSubmit={handleSubmit} className="flex flex-col space-y-4 p-8 bg-slate-400">
       {/* Primera fila */}
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-        <input type="text" placeholder="Nombre" className="border p-2" name="nombre" />
-        <input type="text" placeholder="Apellido" className="border p-2" name="apellido" />
+        <input type="text" placeholder="Nombre" className="border p-2" name="nombres" />
+        <input type="text" placeholder="Apellido" className="border p-2" name="" />
       </div>
 
       {/* Segunda fila */}
