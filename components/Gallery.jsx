@@ -51,7 +51,7 @@ export default function App() {
           <Image src="/img/4p.jpg" width={616} height={410}></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/img/5p.jpg" width={616} height={410}></Image>
+          <Image src="/img/5p.JPG" width={616} height={410}></Image>
         </SwiperSlide>
       </Swiper>
     </>
