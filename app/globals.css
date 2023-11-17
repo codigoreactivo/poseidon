@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'AVGARDD.TTF';
-    src: url('../public/AVGARDD.TTF');
+    src: url('/AVGARDD.TTF');
 }
 
 html{
@@ -13,15 +13,22 @@ html{
 
 .map-p{
     display: flex;
-    flex-basis: content;
     width: 320px;
     height: 480px;
   }
 
 @media (min-width: 1024px) {
     .map-p {
-      width: 1200px;
+      width: 1290px;
       height: 500px;
-      border-radius: 30px;
+      border-radius: 10px;
     }
+  }
+
+ 
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+  
   }
