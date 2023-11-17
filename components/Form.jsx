@@ -1,32 +1,51 @@
 "use client";
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
 const Formulario = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const handlePhoneNumberChange = (e) => {
+    // Utiliza una expresión regular para permitir solo números
+    const sanitizedValue = e.target.value.replace(/[^0-9]/g, "");
+    setPhoneNumber(sanitizedValue);
+  };
   const [formaPago, setFormaPago] = useState("alContado");
 
   const handleFormaPagoChange = (e) => {
     setFormaPago(e.target.value);
   };
-
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_efzgheu', 'template_quxquxa', form.current, 'TIR7WRC51iF3lZG5p')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_efzgheu",
+        "template_quxquxa",
+        form.current,
+        "TIR7WRC51iF3lZG5p"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
           console.log("Solicitus Enviada");
           e.target.reset();
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
-
   return (
-    <form ref={form} onSubmit={sendEmail} className=" flex justify-center items-center flex-col my-8" id="form">
+    <form
+      ref={form}
+      onSubmit={sendEmail}
+      className=" flex justify-center items-center flex-col my-8"
+      id="form"
+    >
       <h2 className=" self-start text-lg ml-4">
         Cotiza aquí tu <span className=" font-bold"> Nuevo Lote</span>{" "}
       </h2>
@@ -37,7 +56,14 @@ const Formulario = () => {
         </div>
         <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
           <label for="phone">Telefono</label>
-          <input type="tel" name="phone" id="phone" required></input>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            value={phoneNumber}
+            onChange={handlePhoneNumberChange}
+            required
+          ></input>
         </div>
         <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
           <label for="email">Correo</label>
@@ -87,6 +113,7 @@ const Formulario = () => {
               <option value="inmediatamente">Inmediatamente</option>
             </select>
           )}
+          <input type="hidden" name="poseidon" id="poseidon" value="001" />
         </div>
       </div>
 

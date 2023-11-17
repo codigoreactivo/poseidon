@@ -28,6 +28,7 @@ const page = () => {
               width="629"
               height="400"
               className="responsive-iframe"
+              loading="lazy"
               src="https://www.youtube.com/embed/V2aUnFMf_Fo"
               title="Vida y Hogar | Asia 109: disfruta los placeres de vivir frente al mar"
               frameborder="0"
