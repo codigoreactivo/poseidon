@@ -1,8 +1,8 @@
-'use client'
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 const Formulario = () => {
-  const [formaPago, setFormaPago] = useState('alContado');
+  const [formaPago, setFormaPago] = useState("alContado");
 
   const handleFormaPagoChange = (e) => {
     setFormaPago(e.target.value);
@@ -11,7 +11,7 @@ const Formulario = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Aquí puedes agregar la lógica para enviar la información
-    console.log('Formulario enviado:', {
+    console.log("Formulario enviado:", {
       nombre: e.target.nombre.value,
       apellido: e.target.apellido.value,
       telefono: e.target.telefono.value,
@@ -25,44 +25,54 @@ const Formulario = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col space-y-4 p-8 bg-slate-400">
-      {/* Primera fila */}
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-        <input type="text" placeholder="Nombre" className="border p-2" name="nombres" />
-        <input type="text" placeholder="Apellido" className="border p-2" name="" />
-      </div>
 
-      {/* Segunda fila */}
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-        <input
-          type="tel"
-          placeholder="Teléfono Celular"
-          pattern="[0-9]*"
-          className="border p-2"
-          name="telefono"
-        />
-        <input type="email" placeholder="Correo Electrónico" className="border p-2" name="correo" />
-      </div>
-
-      {/* Tercera fila */}
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-        <select className="" name="tipoDocumento">
-          <option value="DNI">DNI</option>
-          <option value="CarnetExtranjeria">Carnet de Extranjería</option>
-          <option value="Pasaporte">Pasaporte</option>
-        </select>
-        <input type="number" placeholder="Número del Documento" className="border p-2" name="numeroDocumento" />
-      </div>
-
-      {/* Cuarta fila */}
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-        <select onChange={handleFormaPagoChange} value={formaPago} className="border p-2" name="formaPago">
-          <option value="alContado">Al Contado</option>
-          <option value="credito">Crédito</option>
-        </select>
-
-        {formaPago === 'credito' ? (
-          <select className="border p-2" name="plazoCredito">
+      <form className=" flex justify-center items-center flex-col my-8" id="form">
+        <div className="flex basis-full flex-wrap justify-between gap-3 p-3">
+          <div className="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
+            <label for="from_name">Nombres y Apellidos</label>
+            <input type="text" name="from_name" id="from_name" required></input>
+          </div>
+          <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
+            <label for="phone">Telefono</label>
+            <input type="tel" name="phone" id="phone" required></input>
+          </div>
+          <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
+            <label for="email">Correo</label>
+            <input type="email" name="email" id="email" required></input>
+          </div>
+          <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
+            <label for="city">Ciudad</label>
+            <input type="text" name="city" id="city" required></input>
+          </div>
+          <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
+            <label for="docType">Tipo de Documento</label>
+            <select className="" name="docType" id="docType" required>
+              <option value="DNI">DNI</option>
+              <option value="CarnetExtranjeria">Carnet de Extranjería</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+          </div>
+          <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
+            <label for="numDoc">Numero de Documento</label>
+            <input type="number" name="numDoc" id="numDoc" required></input>
+          </div>
+          <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
+            <label for="payMethod">Forma de Pago</label>
+            <select
+              onChange={handleFormaPagoChange}
+              value={formaPago}
+              name="payMethod"
+              id="payMethod"
+              required
+            >
+              <option value="alContado">Al Contado</option>
+              <option value="credito">Crédito</option>
+            </select>
+          </div>
+          <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
+            <label for="payTime">Plazo de Pago</label>
+            {formaPago === "credito" ? (
+          <select  name="payTime" id="payTime" required>
             <option value="inmediatamente">Inmediatamente</option>
             <option value="1Mes">1 Mes</option>
             <option value="2Meses">2 Meses</option>
@@ -70,17 +80,16 @@ const Formulario = () => {
             <option value="masMeses">Más de 3 Meses</option>
           </select>
         ) : (
-          <select className="border p-2" name="plazoCredito">
+          <select name="payTime" id="payTime" required>
             <option value="inmediatamente">Inmediatamente</option>
           </select>
         )}
-      </div>
+          </div>
+        </div>
 
-      {/* Botón de envío */}
-      <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-        Enviar
-      </button>
-    </form>
+        <input className=" bg-[#3B82F6] w-[90%] h-[50px] text-white" type="submit" id="button" value="Enviar ahora"></input>
+      </form>
+   
   );
 };
 

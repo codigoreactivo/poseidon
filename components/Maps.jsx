@@ -1,8 +1,26 @@
 import React from "react";
+import Image from "next/image";
 
 const maps = () => {
   return (
     <div className="flex justify-center items-center flex-col">
+      <div className="flex lg:flex-row flex-col justify-between items-center w-full lg:w-[1290px] my-6 px-2">
+        <h2 className=" text-3xl">
+          Ubicación del <span className=" font-bold">Proyecto</span>
+        </h2>
+        <div className="flex flex-row gap-4">
+          <div>
+            <button className="  text-sm uppercase border-solid border-[1px] border-[#15AF3A] px-[15px] h-[50px] rounded-md hover:bg-[#15AF3A] hover:text-white">
+              <span></span>Ver con Maps
+            </button>
+          </div>
+          <div>
+            <button className=" text-sm uppercase border-solid border-[1px] border-[#00B0A6] px-[15px] h-[50px] rounded-md p-2 hover:bg-[#00B0A6] hover:text-white">
+              <span></span>Ver con Waze
+            </button>
+          </div>
+        </div>
+      </div>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3887.551781166073!2d-76.48534900000001!3d-13.000495!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105599320d9055f%3A0x749edeee51200d56!2sCONDOMINIO%20DE%20PLAYA%20POSEIDON!5e0!3m2!1ses-419!2spe!4v1700169505975!5m2!1ses-419!2spe"
         width="1290"
@@ -12,25 +30,33 @@ const maps = () => {
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-      <div className="flex flex-col xl:flex-row gap-2">
-        <div className=" bg-[#15AF3A] text-white">
-          <span>Ubicanos en</span>
-          <h3>KM 109 de la Panamericana Sur en el distrito de Asia.</h3>
+      <div className="flex flex-col xl:flex-row gap-2 w-full  lg:max-w-[1152px] rounded-md m-[-1rem]  lg:m-[-3rem] bg-[#fff]">
+        <div dir="ltr" className=" bg-[#15AF3A] text-white rounded-s-lg p-2 xl:p-6 lg:w-[40%]">
+          <span className="text-md ">Ubicanos en</span>
+          <h3 className=" text-xl font-bold">
+            KM 109 de la Panamericana Sur en el distrito de Asia.
+          </h3>
         </div>
-        <div className="flex xl:flex-row flex-col gap-4">
-          <div>
-            <div></div>
-            <p>Inscritos en Registros Públicos</p>
+        <div className="flex xl:flex-row flex-col gap-4 justify-center items-center w-[60%]">
+          <div className="lg:w-[30%] flex ">
+            <div>
+              <Image src="/icons/adelanto.svg" width={30} height={30}></Image>
+            </div>
+            <p className="text-xl mx-2">Inscritos en Registros Públicos</p>
           </div>
-          <div>
+          <div className="lg:w-[30%] flex">
             {" "}
-            <div></div>
-            <p>Precios Desde USD $ 60.000</p>
+            <div>
+              <Image src="/icons/adelanto.svg" width={30} height={30}></Image>
+            </div>
+            <p className="text-xl mx-2">Precios Desde USD $60,000</p>
           </div>
-          <div>
+          <div className="lg:w-[30%] flex">
             {" "}
-            <div></div>
-            <p>Separa con USD$ 500 dólares</p>
+            <div>
+              <Image src="/icons/adelanto.svg" width={30} height={30}></Image>
+            </div>
+            <p className="text-xl mx-2">Separa con USD $500</p>
           </div>
         </div>
       </div>
