@@ -1,4 +1,4 @@
-
+'use client'
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -39,19 +39,19 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <Image src="/img/1p.jpg" width={616} height={410}></Image>
+          <Image src="/img/1p.jpeg" width={616} height={410}></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/img/2p.jpg" width={616} height={410}></Image>
+          <Image src="/img/2p.jpeg" width={616} height={410}></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/img/3p.jpg" width={616} height={410}></Image>
+          <Image src="/img/3p.jpeg" width={616} height={410}></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/img/4p.jpg" width={616} height={410}></Image>
+          <Image src="/img/4p.jpeg" width={616} height={410}></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image src="/img/5p.JPG" width={616} height={410}></Image>
+          <Image src="/img/5p.jpeg" width={616} height={410}></Image>
         </SwiperSlide>
       </Swiper>
     </>
