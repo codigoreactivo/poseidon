@@ -59,7 +59,7 @@ const page = () => {
               <p className=" text-xl">
                 Lotes en primera fila de alta rentabilidad, desde:
               </p>
-              <span className=" lg:text-6xl lg:font-black">USD $15,000</span>
+              <span className=" lg:text-6xl lg:font-black">USD $12,000</span>
               <p className=" text-sm">
                 Consulta por nuestros descuentos especiales en pagos al contado.
               </p>
@@ -86,7 +86,7 @@ const page = () => {
                   <Image src="/icons/cash.svg" width={30} height={30}></Image>
                 </div>
                 <p className="text-xl">
-                  Precios desde <span className=" font-bold">USD $ 15,000</span>
+                  Precios desde <span className=" font-bold">USD $ 12,000</span>
                 </p>
               </div>
               <div className="flex flex-row p-4 items-center gap-4 shadow-lg rounded-md xl:max-w-[55%]">

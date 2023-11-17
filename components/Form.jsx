@@ -3,6 +3,16 @@ import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const Formulario = () => {
+    const form = useRef();
+    const [pageTitle, setPageTitle] = useState('');
+  useEffect(() => {
+    // Actualiza el título de la página en el estado
+    const title = document.title;
+    setPageTitle(title);
+  }, []);
+  const formData = new FormData(form.current);
+    formData.append('pageTitle', pageTitle);
+
   const [phoneNumber, setPhoneNumber] = useState("");
 
   const handlePhoneNumberChange = (e) => {
@@ -15,7 +25,7 @@ const Formulario = () => {
   const handleFormaPagoChange = (e) => {
     setFormaPago(e.target.value);
   };
-  const form = useRef();
+ 
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -95,25 +105,25 @@ const Formulario = () => {
             required
           >
             <option value="alContado">Al Contado</option>
-            <option value="credito">Crédito</option>
+            {/* <option value="credito">Crédito</option>*/}
           </select>
         </div>
         <div class="field flex flex-col lg:basis-[48%] basis-full border-solid border-[1px] border-[#111] p-1">
           <label for="payTime">Plazo de Pago</label>
-          {formaPago === "credito" ? (
-            <select name="payTime" id="payTime" required>
-              <option value="inmediatamente">Inmediatamente</option>
-              <option value="1Mes">1 Mes</option>
+          {/* {formaPago === "credito" ? (*/}
+          <select name="payTime" id="payTime" required>
+            <option value="inmediatamente">Inmediatamente</option>
+            {/* <option value="1Mes">1 Mes</option>
               <option value="2Meses">2 Meses</option>
               <option value="3Meses">3 Meses</option>
-              <option value="masMeses">Más de 3 Meses</option>
-            </select>
-          ) : (
+              <option value="masMeses">Más de 3 Meses</option>*/}
+          </select>
+          {/* {) : (
             <select name="payTime" id="payTime" required>
               <option value="inmediatamente">Inmediatamente</option>
             </select>
-          )}
-          <input type="hidden" name="poseidon" id="poseidon" value="001" />
+          )}(*/}
+          <input type="hidden" name="pageTitle" value={pageTitle} />
         </div>
       </div>
 

@@ -34,7 +34,7 @@ const maps = () => {
         <div dir="ltr" className=" bg-[#15AF3A] text-white rounded-s-lg p-2 xl:p-6 lg:w-[40%]">
           <span className="text-md ">Ubicanos en</span>
           <h3 className=" text-xl font-bold">
-            KM 109 de la Panamericana Sur en el distrito de Asia.
+            Km. 128.2 de la Panamericana Sur, Cañete, Cerro Azul
           </h3>
         </div>
         <div className="flex xl:flex-row flex-col gap-4 justify-center items-center w-[60%]">
