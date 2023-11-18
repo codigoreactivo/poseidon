@@ -23,7 +23,7 @@ const page = () => {
                   <div>
                     <Image
                       className="w-[40px] p-2 backdrop-sepia-0 bg-[#058FC7]/50 rounded-full stroke-white"
-                      src="/icons/register.svg"
+                      src="/icons/location.svg"
                       width={250}
                       height={232}
                     ></Image>
@@ -34,31 +34,31 @@ const page = () => {
                   </span>
                 </div>
                 <div className="flex flex-col lg:gap-3">
-                <h1 className=" text-[2rem] leading-none my-3 lg:my-0 lg:text-5xl  text-white ">
-                  Condominio Residencial de Playa
-                  <span className=" font-black"> Poseidon</span>{" "}
-                </h1>
-                <h2 className=" lg:text-[2rem] text-[1rem] font-light leading-none">
-                  Lotes con área <br className="hidden lg:block" />
-                  desde
-                  <span className=" font-bold"> 120 M2</span>{" "}
-                </h2>
-                <p className=" lg:text-xl">
-                  Lotes en primera fila de alta rentabilidad, desde:
-                </p>
-                <span className=" lg:text-6xl text-[2.2rem] font-black">
-                  USD $12,000
-                </span>
-                <p className=" text-sm">
-                  Consulta por nuestros descuentos especiales en pagos al
-                  contado.
-                </p>
+                  <h1 className=" text-[2rem] leading-none my-3 lg:my-0 lg:text-5xl  text-white ">
+                    Condominio Residencial de Playa
+                    <span className=" font-black"> Poseidon</span>{" "}
+                  </h1>
+                  <h2 className=" lg:text-[2rem] text-[1rem] font-light leading-none">
+                    Lotes con área <br className="hidden lg:block" />
+                    desde
+                    <span className=" font-bold"> 120 M2</span>{" "}
+                  </h2>
+                  <p className=" lg:text-xl">
+                    Lotes en primera fila de alta rentabilidad, desde:
+                  </p>
+                  <span className=" lg:text-6xl text-[2.2rem] font-black">
+                    USD $12,000
+                  </span>
+                  <p className=" text-sm">
+                    Consulta por nuestros descuentos especiales en pagos al
+                    contado.
+                  </p>
                 </div>
                 <div>
                   <p className=" lg:text-xl">
-                  ¡Asegura tu lugar junto al mar ahora!
+                    ¡Asegura tu lugar junto al mar ahora!
                   </p>
-                  <button className=" bg-[#15AF3A] h-[55px] p-[5px] rounded-[8px] my-4">
+                  <button className=" bg-[#15AF3A] h-[55px] px-[5px] lg:px-[25px] lg:text-xl rounded-[8px] my-4">
                     <Link href="#form">
                       Separa tu lote por solo{" "}
                       <span className=" font-black">USD $500 dólares</span>{" "}
@@ -113,7 +113,7 @@ const page = () => {
         </div>
       </section>
       <section className=" xl:h-[70vh] h-auto flex flex-col justify-center items-center">
-        <div className="flex lg:flex-row flex-col justify-between items-center w-full lg:w-[1290px] my-6 px-2">
+        <div className="flex lg:flex-row flex-col justify-between items-center w-full lg:w-[1290px] my-12 px-2">
           <h2 className=" text-3xl">
             Caracteristicas del<span className=" font-bold"> Proyecto</span>
           </h2>
@@ -214,77 +214,77 @@ const page = () => {
             <div className=" flex gap-2 items-center text-[14px] ">
               <div className="">
                 <Image
-                  src="/icons/atrib/register.svg"
+                  src="/icons/atrib/park.svg"
                   className="bg-[#B9F6F7] text-[#15AF3A] flex  p-4 rounded-full"
                   width={60}
                   height={60}
                 ></Image>
               </div>
               <p className="">
-                Redes de agua,
-                <br className=" hidden lg:block" /> desagüe y electrificación
+                Área de estacionamiento
+                <br className=" hidden lg:block" />
               </p>
             </div>
             <div className=" flex gap-2 items-center text-[14px]">
               <div className="">
                 <Image
-                  src="/icons/atrib/register.svg"
+                  src="/icons/atrib/cerco.svg"
                   className="bg-[#B9F6F7] text-[#15AF3A] flex  p-4 rounded-full"
                   width={60}
                   height={80}
                 ></Image>
               </div>
-              <p>Entrega Inmediata</p>
+              <p>Cerco Perimétrico</p>
             </div>
             <div className="flex gap-2 items-center text-[14px]">
               <div className="">
                 <Image
-                  src="/icons/atrib/potico.svg"
+                  src="/icons/atrib/green.svg"
                   className="bg-[#B9F6F7] text-[#15AF3A] flex  p-4 rounded-full"
                   width={60}
                   height={80}
                 ></Image>
               </div>
-              <p>Pórtico de Ingreso</p>
+              <p>Áreas Verdes,<br className=" hidden lg:block" /> veredas y sardineles</p>
             </div>
             <div className="flex gap-2 items-center text-[14px]">
               <div className="">
                 <Image
-                  src="/icons/atrib/seg.svg"
+                  src="/icons/atrib/beach.svg"
                   className="bg-[#B9F6F7] text-[#15AF3A] flex  p-4 rounded-full"
                   width={60}
                   height={80}
                 ></Image>
               </div>
               <p>
-                Caseta de Seguridad <br className=" hidden lg:block" />{" "}
-                (vigilada las 24 horas)
+              Frente al Mar
+
               </p>
             </div>
             <div className="flex gap-2 items-center text-[15px]">
               <div className="">
                 <Image
-                  src="/icons/register.svg"
+                  src="/icons/atrib/area.svg"
                   className="bg-[#B9F6F7] text-[#15AF3A] flex  p-4 rounded-full"
                   width={60}
                   height={80}
                 ></Image>
               </div>
               <p>
-                Postes con <br className=" hidden lg:block" />
-                luminarias solares
+              Lotes con área <br className=" hidden lg:block" />
+              desde 120 M2
               </p>
             </div>
             <div className="flex gap-2 items-center text-[14px]">
               <div className="">
                 <Image
-                  src="/icons/register.svg"
+                  src="/icons/atrib/alfalto.svg"
                   className="bg-[#B9F6F7] text-[#15AF3A] flex  p-3 rounded-full"
                   width={60}
                   height={80}
                 ></Image>
               </div>
-              <p>Servicios básicos</p>
+              <p>Camino Afirmados</p>
             </div>
           </div>
         </div>
