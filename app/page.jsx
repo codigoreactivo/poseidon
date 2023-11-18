@@ -58,7 +58,7 @@ const page = () => {
                   <p className=" lg:text-xl">
                   ¡Asegura tu lugar junto al mar ahora!
                   </p>
-                  <button className=" bg-[#15AF3A] h-[55px] p-[5px] rounded=[8px] my-4">
+                  <button className=" bg-[#15AF3A] h-[55px] p-[5px] rounded-[8px] my-4">
                     <Link href="#form">
                       Separa tu lote por solo{" "}
                       <span className=" font-black">USD $500 dólares</span>{" "}
