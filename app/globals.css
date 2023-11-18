@@ -7,11 +7,13 @@
     src: url('/fonts/AVGARDD.TTF') format("truetype");
 }
 
-
+*{
+scroll-behavior: smooth !important;
+}
 .map-p{
     display: flex;
     width: 320px;
-    height: 480px;
+    height: 450px;
   }
 
 @media (min-width: 1024px) {
@@ -25,15 +27,15 @@
  
   /* Then style the iframe to fit in the container div with full height and width */
   .responsive-iframe {
-    width: fit-content;
+    width: 100%;
     aspect-ratio: 16/9;
   
   }
   @media (min-width: 1024px){
     .responsive-iframe {
         width: 100%;
-        height: 100%;
-        aspect-ratio: 1.77777;
+        height: fit-content;
+        aspect-ratio: 16/9;
   }
 }
 /*SWIPER PAGINATION*/

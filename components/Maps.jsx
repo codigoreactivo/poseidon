@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 const maps = () => {
   return (
     <div className="flex justify-center items-center flex-col">
@@ -11,12 +11,23 @@ const maps = () => {
         <div className="flex flex-row gap-4">
           <div>
             <button className="  text-sm uppercase border-solid border-[1px] border-[#15AF3A] px-[15px] h-[50px] rounded-md hover:bg-[#15AF3A] hover:text-white">
-              <span></span>Ver con Maps
+              <Link
+                target="_blank"
+                href="https://www.google.com/maps?ll=-13.000495,-76.485349&z=16&t=m&hl=es-419&gl=PE&mapclient=embed&cid=8403399069864562006"
+              >
+                Ver con Maps
+              </Link>
             </button>
           </div>
           <div>
             <button className=" text-sm uppercase border-solid border-[1px] border-[#00B0A6] px-[15px] h-[50px] rounded-md p-2 hover:bg-[#00B0A6] hover:text-white">
-              <span></span>Ver con Waze
+              {" "}
+              <Link
+                target="_blank"
+                href="https://ul.waze.com/ul?place=EiZDdHJhLiBQYW5hbWVyaWNhbmEgUywgQ2Vycm8gQXp1bCwgUGVydSIuKiwKFAoSCcu438cgyVqREVsj4BK9CmEDEhQKEgmPe27ybFgFkRFXAK8StIMo6g&ll=-12.97619870%2C-76.49499700&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+              >
+                Ver con Waze
+              </Link>{" "}
             </button>
           </div>
         </div>
@@ -31,7 +42,7 @@ const maps = () => {
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
       <div className="flex flex-col xl:flex-row gap-2 w-full  lg:max-w-[1202px] rounded-md m-[-1rem] px-6 lg:px-0  lg:m-[-3rem] bg-[#fff]">
-        <div  className=" bg-[#058FC7] text-white lg:rounded-s-lg p-2 xl:p-6 lg:w-[40%]">
+        <div className=" bg-[#058FC7] text-white lg:rounded-s-lg p-2 xl:p-6 lg:w-[40%]">
           <span className="text-md ">Ubicanos en</span>
           <h3 className=" text-xl font-bold">
             Km. 128.2 de la Panamericana Sur, Cañete, Cerro Azul
@@ -40,23 +51,48 @@ const maps = () => {
         <div className="flex xl:flex-row flex-col gap-4 justify-center lg:items-center w-full lg:w-[60%] ">
           <div className="lg:w-[30%] flex flex-row items-center gap-2 ">
             <div>
-              <Image src="/icons/adelanto.svg" className="bg-[#B9F6F7] p-3 rounded-full" width={50} height={50}></Image>
+              <Image
+                src="/icons/adelanto.svg"
+                className="bg-[#B9F6F7] p-3 rounded-full"
+                width={50}
+                height={50}
+              ></Image>
             </div>
-            <p className="text-[1rem] mx-1">Inscritos en <br className=" hidden lg:block" /> <span className=" font-bold">Registros Públicos</span></p>
+            <p className="text-[1rem] mx-1">
+              Inscritos en <br className=" hidden lg:block" />{" "}
+              <span className=" font-bold">Registros Públicos</span>
+            </p>
           </div>
           <div className="lg:w-[30%] flex flex-row items-center gap-2">
             {" "}
             <div>
-              <Image src="/icons/adelanto.svg" className="bg-[#B9F6F7] p-3 rounded-full" width={50} height={50}></Image>
+              <Image
+                src="/icons/adelanto.svg"
+                className="bg-[#B9F6F7] p-3 rounded-full"
+                width={50}
+                height={50}
+              ></Image>
             </div>
-            <p className="text-[1rem] mx-1">Precios desde <br className=" hidden lg:block" /> <span className=" font-bold">USD $12,000</span></p>
+            <p className="text-[1rem] mx-1">
+              Precios desde <br className=" hidden lg:block" />{" "}
+              <span className=" font-bold">USD $12,000</span>
+            </p>
           </div>
           <div className="lg:w-[30%] flex flex-row items-center gap-2">
             {" "}
             <div>
-              <Image src="/icons/adelanto.svg" className="bg-[#B9F6F7] p-3 rounded-full" width={50} height={50}></Image>
+              <Image
+                src="/icons/adelanto.svg"
+                className="bg-[#B9F6F7] p-3 rounded-full"
+                width={50}
+                height={50}
+              ></Image>
             </div>
-            <p className="text-[1rem] mx-1">Separa con<br className=" hidden lg:block" /><span className=" font-bold"> USD $500 </span></p>
+            <p className="text-[1rem] mx-1">
+              Separa con
+              <br className=" hidden lg:block" />
+              <span className=" font-bold"> USD $500 </span>
+            </p>
           </div>
         </div>
       </div>
