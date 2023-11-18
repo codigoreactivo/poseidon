@@ -133,7 +133,7 @@ const page = () => {
           </div>
         </div>
         <div className=" flex flex-col  justify-center items-center lg:max-w-[1290px] gap-8 ">
-          <div className="  text-left leading-[1.2] flex flex-col lg:flex-row justify-between w-full gap-4 ">
+          <div className="  text-left leading-[1.2] flex flex-col lg:flex-row justify-between w-full gap-4 mx-4 lg:mx-0 ">
             <div className=" flex gap-2 items-center text-[14px] ">
               <div className="">
                 <Image
@@ -210,7 +210,7 @@ const page = () => {
               <p>Servicios básicos</p>
             </div>
           </div>
-          <div className="  text-left leading-[1.2] flex flex-col lg:flex-row justify-between w-full gap-4 ">
+          <div className="  text-left leading-[1.2] flex flex-col lg:flex-row justify-between w-full gap-4 mx-4 lg:mx-0 ">
             <div className=" flex gap-2 items-center text-[14px] ">
               <div className="">
                 <Image
