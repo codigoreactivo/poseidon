@@ -10,32 +10,39 @@ import "swiper/css/pagination";
 616
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 export default function App() {
   return (
     <>
       <Swiper
+      
         slidesPerView={1}
         spaceBetween={10}
         pagination={{
           clickable: true,
+
         }}
+        autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
         breakpoints={{
           640: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
-        modules={[Pagination]}
+        modules={[Autoplay,Navigation, Pagination, Scrollbar, A11y]}
         className="mySwiper"
       >
         <SwiperSlide>

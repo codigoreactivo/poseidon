@@ -30,33 +30,33 @@ const maps = () => {
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-      <div className="flex flex-col xl:flex-row gap-2 w-full  lg:max-w-[1152px] rounded-md m-[-1rem]  lg:m-[-3rem] bg-[#fff]">
-        <div dir="ltr" className=" bg-[#15AF3A] text-white rounded-s-lg p-2 xl:p-6 lg:w-[40%]">
+      <div className="flex flex-col xl:flex-row gap-2 w-full  lg:max-w-[1202px] rounded-md m-[-1rem] px-6 lg:px-0  lg:m-[-3rem] bg-[#fff]">
+        <div  className=" bg-[#058FC7] text-white lg:rounded-s-lg p-2 xl:p-6 lg:w-[40%]">
           <span className="text-md ">Ubicanos en</span>
           <h3 className=" text-xl font-bold">
             Km. 128.2 de la Panamericana Sur, Cañete, Cerro Azul
           </h3>
-        </div>
-        <div className="flex xl:flex-row flex-col gap-4 justify-center items-center w-[60%]">
-          <div className="lg:w-[30%] flex ">
+        </div>':'
+        <div className="flex xl:flex-row flex-col gap-4 justify-center lg:items-center w-full lg:w-[60%] ">
+          <div className="lg:w-[30%] flex flex-row items-center gap-2 ">
             <div>
-              <Image src="/icons/adelanto.svg" width={30} height={30}></Image>
+              <Image src="/icons/adelanto.svg" className="bg-[#B9F6F7] p-3 rounded-full" width={50} height={50}></Image>
             </div>
-            <p className="text-xl mx-2">Inscritos en Registros Públicos</p>
+            <p className="text-[1rem] mx-1">Inscritos en <br className=" hidden lg:block" /> <span className=" font-bold">Registros Públicos</span></p>
           </div>
-          <div className="lg:w-[30%] flex">
+          <div className="lg:w-[30%] flex flex-row items-center gap-2">
             {" "}
             <div>
-              <Image src="/icons/adelanto.svg" width={30} height={30}></Image>
+              <Image src="/icons/adelanto.svg" className="bg-[#B9F6F7] p-3 rounded-full" width={50} height={50}></Image>
             </div>
-            <p className="text-xl mx-2">Precios Desde USD $60,000</p>
+            <p className="text-[1rem] mx-1">Precios desde <br className=" hidden lg:block" /> <span className=" font-bold">USD $12,000</span></p>
           </div>
-          <div className="lg:w-[30%] flex">
+          <div className="lg:w-[30%] flex flex-row items-center gap-2">
             {" "}
             <div>
-              <Image src="/icons/adelanto.svg" width={30} height={30}></Image>
+              <Image src="/icons/adelanto.svg" className="bg-[#B9F6F7] p-3 rounded-full" width={50} height={50}></Image>
             </div>
-            <p className="text-xl mx-2">Separa con USD $500</p>
+            <p className="text-[1rem] mx-1">Separa con<br className=" hidden lg:block" /><span className=" font-bold"> USD $500 </span></p>
           </div>
         </div>
       </div>
