@@ -36,7 +36,7 @@ const maps = () => {
           <h3 className=" text-xl font-bold">
             Km. 128.2 de la Panamericana Sur, Cañete, Cerro Azul
           </h3>
-        </div>':'
+        </div>
         <div className="flex xl:flex-row flex-col gap-4 justify-center lg:items-center w-full lg:w-[60%] ">
           <div className="lg:w-[30%] flex flex-row items-center gap-2 ">
             <div>
