@@ -55,7 +55,7 @@ const Formulario = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className=" flex bg-[#058FC7]  rounded-md justify-center h-fit items-center flex-col p-4"
+      className=" flex  rounded-md justify-center h-fit items-center flex-col p-4 backdrop-sepia-0 bg-[#058FC7]/50"
       id="form"
     >
       <div className="flex basis-full flex-wrap justify-between gap-3 leading-none">
