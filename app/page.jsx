@@ -15,9 +15,9 @@ const page = () => {
           backgroundImage: "url('img/con-poseidon.jpg')",
         }}
       >
-        <div className="w-full z-10 gap-8 flexflex-col justify-between lg:px-24">
+        <div className="w-full  z-10 gap-8 flexflex-col justify-between lg:px-24">
           <div className="flex justify-between items-center w-full">
-            <h1 className=" lg:text-4xl font-[AVGARDD]">
+            <h1 className=" lg:text-4xl  text-white font-[AVGARDD]">
               Condominio Residencial de Playa
               <span className=" font-bold"> Poseidon</span>{" "}
             </h1>
@@ -29,7 +29,7 @@ const page = () => {
             ></Image>
           </div>
           <div className="flex justify-between lg:flex-row flex-col">
-            <div className=" flex flex-col justify-center gap-6 ">
+            <div className=" flex text-white flex-col justify-center gap-6 ">
               <div className="justify-start items-start flex flex-col gap-3">
                 <h2 className=" text-[2.5rem]">
                   Lotes con área desde

@@ -13,11 +13,11 @@ const WhatsAppButton = () => {
 
   return (
     <button
-      className="fixed bottom-4 right-4 p-4 bg-green-500 text-white rounded-full shadow-lg"
+      className="fixed z-50 bottom-4 right-4 p-4 bg-green-500 text-white rounded-full shadow-lg"
       onClick={handleWhatsAppClick}
     >
       {/* Puedes personalizar el ícono de WhatsApp aquí */}
-      <FaWhatsapp />
+      <FaWhatsapp className=' w-[2rem] h-[2rem]' />
 
     </button>
   );
