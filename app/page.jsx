@@ -93,7 +93,7 @@ const page = () => {
               </div>
             </div>
             <iframe
-              src="https://www.youtube.com/embed/3SUjPQ09soQ?autoplay=1&mute=1&loop=1&playlist=3SUjPQ09soQ"
+              src="https://www.youtube.com/embed/h3iaFXs5GT0?autoplay=1&mute=1&loop=1&playlist=h3iaFXs5GT0"
               width="560"
               height="315"
               className="responsive-iframe"
@@ -335,11 +335,19 @@ const page = () => {
       </section>
       <section className=" w-auto h-[70vh] flex flex-col justify-center">
         <div className=" flex justify-center">
-          <h2>Explora max el proyecto</h2>
+          <h2 className=" text-2xl font-extrabold my-6">Explora mas el proyecto</h2>
         </div>
         <div>
           <Gallery />
         </div>
+        <div className="flex flex-row gap-4 justify-center my-6 text-white">
+              <button className=" bg-[#15AF3A] h-[55px] p-[15px] rounded=[8px]">
+                <Link href="#form">
+                  Separa tu lote por solo{" "}
+                  <span className=" font-black">USD $500 dólares</span>{" "}
+                </Link>
+              </button>
+            </div>
       </section>
       <Wa />
     </div>
