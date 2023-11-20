@@ -44,7 +44,7 @@ const page = () => {
                     <span className=" font-bold"> 120 M2</span>{" "}
                   </h2>
                   <p className=" lg:text-xl">
-                    Lotes en primera fila de alta rentabilidad, desde:
+                    Lotes de playa de alta rentabilidad, desde:
                   </p>
                   <span className=" lg:text-6xl text-[2.2rem] font-black">
                     USD $12,000
